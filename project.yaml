@@ -5,13 +5,6 @@ metadata:
 
 ---
 
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: projet
-
----
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
