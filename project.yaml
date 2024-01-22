@@ -5,6 +5,13 @@ metadata:
 
 ---
 
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: projet
+
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -22,7 +29,9 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx 
+        image: nginx:latest
+        ports:
+        - containerPort: 80
 
 ---
 
@@ -33,11 +42,11 @@ metadata:
   namespace: projet
 spec:
   selector:
-    app: nginx-deployment
+    app: nginx
   ports:
-    - protocol: TCP
-      port: 8080
-      targetPort: 8080
+  - protocol: TCP
+    port: 80
+    targetPort: 80
   type: LoadBalancer
 
 ---
@@ -70,7 +79,7 @@ spec:
         - name: MYSQL_PASSWORD
           value: password
         ports:
-        - containerPort: 3306
+          - containerPort: 3306
 
 ---
 
