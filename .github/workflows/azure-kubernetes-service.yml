@@ -36,10 +36,10 @@ on:
 
 env:
   AZURE_CONTAINER_REGISTRY: "your-azure-container-registry"
-  CONTAINER_NAME: "your-container-name"
-  RESOURCE_GROUP: "your-resource-group"
-  CLUSTER_NAME: "your-cluster-name"
-  DEPLOYMENT_MANIFEST_PATH: "your-deployment-manifest-path"
+  CONTAINER_NAME: ""
+  RESOURCE_GROUP: "cloud-shell-storage-westeurope"
+  CLUSTER_NAME: "aksdeploy"
+  DEPLOYMENT_MANIFEST_PATH: "projet.yaml"
 
 jobs:
   buildImage:
