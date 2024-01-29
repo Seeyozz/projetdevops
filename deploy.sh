@@ -9,26 +9,26 @@ deploy() {
     cd ./app
 
     # Construire l'image Docker
-    docker build -t web_app:v1 .
+    sudo docker build -t web_app:v1 .
 
     # Naviguer vers le répertoire du script k8s
     cd ..
 
     # Appliquer le fichier YAML au cluster Kubernetes
-    kubectl apply -f $FILE
+    sudo kubectl apply -f $FILE
 
     # Vérifier le statut du déploiement et du service
-    kubectl get pods,deployment,service -n projet
+    sudo kubectl get pods,deployment,service -n projet
 }
 
 # Fonction pour supprimer
 delete() {
 
     # Supprimer les ressources Kubernetes
-    kubectl delete -f $FILE
+    sudo kubectl delete -f $FILE
 
-    docker rmi web_app:v1
-    docker rmi mysql
+    sudo  docker rmi web_app:v1
+    sudo docker rmi mysql
 }
 
 # Vérifier l'argument passé
