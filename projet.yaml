@@ -88,4 +88,4 @@ spec:
   - port: 80
   selector:
     app: php-app
-  type: LoadBalancer  # Crée un LoadBalancer si vous êtes sur un cloud provider
+  type: LoadBalancer
