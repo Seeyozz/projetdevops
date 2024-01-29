@@ -27,7 +27,7 @@ Avant de déployer cette application, assurez-vous d'avoir les éléments suivan
 
 3. Lancer le script qui permet de déployer automatiquement l'app
     ```bash
-    ./deploy.sh deploy
+    sudo bash ./deploy.sh deploy
     ```
 
 #### Et voila notre application est bien lancer il suffit de rentrer l'external-ip dy service php pour pouvoir y accéder
@@ -39,7 +39,7 @@ Avant de déployer cette application, assurez-vous d'avoir les éléments suivan
 1. Lancer le script qui permet de supprimer automatiquement l'app
 
     ```bash
-    ./deploy.sh delete
+    sudo bash ./deploy.sh delete
     ```
 
 2. Sortir du dossier courrant
