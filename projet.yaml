@@ -60,7 +60,7 @@ metadata:
   name: php-app
   namespace: projet
 spec:
-  replicas: 2  # exemple de réplication pour le load balancing
+  replicas: 2
   selector:
     matchLabels:
       app: php-app
@@ -71,7 +71,7 @@ spec:
     spec:
       containers:
       - name: php-app
-        image: web_app:v1  # Remplacer par le nom de votre image Docker
+        image: web_app:v1
         ports:
         - containerPort: 80
 
