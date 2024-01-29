@@ -15,17 +15,17 @@ deploy() {
     cd ..
 
     # Appliquer le fichier YAML au cluster Kubernetes
-    sudo kubectl apply -f $FILE
+    kubectl apply -f $FILE
 
     # Vérifier le statut du déploiement et du service
-    sudo kubectl get pods,deployment,service -n projet
+    kubectl get pods,deployment,service -n projet
 }
 
 # Fonction pour supprimer
 delete() {
 
     # Supprimer les ressources Kubernetes
-    sudo kubectl delete -f $FILE
+    kubectl delete -f $FILE
 
     sudo  docker rmi web_app:v1
     sudo docker rmi mysql
